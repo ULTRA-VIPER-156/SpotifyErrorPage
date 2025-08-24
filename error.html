@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Add-on Catastrophe!</title>
+    <link rel="stylesheet" href="styke.css">
+    <style>
+        body {
+            background: radial-gradient(circle at 60% 40%, #f5f5f7 0%, #e0e0e6 100%);
+            color: #222;
+            font-family: 'San Francisco', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .error-container {
+            max-width: 540px;
+            margin: 70px auto;
+            background: rgba(255,255,255,0.85);
+            border-radius: 32px;
+            box-shadow: 0 8px 48px #1db95433, 0 1.5px 8px #0002;
+            padding: 48px 36px 36px 36px;
+            text-align: center;
+            position: relative;
+        }
+        .logo-glow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .spotify-logo {
+            width: 90px;
+            filter: drop-shadow(0 0 24px #1db95488);
+            transition: transform 0.3s;
+        }
+        .spotify-logo:hover {
+            transform: scale(1.08) rotate(-8deg);
+        }
+        .error-title {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #1db954;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 16px #1db95422;
+        }
+        .error-message {
+            font-size: 1.25em;
+            margin-bottom: 32px;
+            color: #444;
+        }
+        .error-code {
+            font-size: 1.1em;
+            color: #e53935;
+            background: #fff3f3;
+            border-radius: 8px;
+            padding: 6px 18px;
+            display: inline-block;
+            margin-bottom: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px #e5393522;
+        }
+        .error-actions {
+            margin-top: 24px;
+        }
+        .error-actions button {
+            background: linear-gradient(90deg, #1db954 60%, #1ed760 100%);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 36px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0 12px;
+            box-shadow: 0 2px 12px #1db95444;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .error-actions button:hover {
+            background: linear-gradient(90deg, #1ed760 60%, #1db954 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+        .apple-gloss {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 60px;
+            border-radius: 32px 32px 0 0;
+            background: linear-gradient(90deg, #fff8 0%, #fff2 100%);
+            opacity: 0.7;
+        }
+        .subtle-icon {
+            font-size: 3em;
+            color: #1db95444;
+            margin-bottom: 10px;
+            animation: bounce 2.2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-12px);}
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.95em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="apple-gloss"></div>
+        <div class="logo-glow">
+            <img class="spotify-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
+        </div>
+        <div class="subtle-icon">🛑</div>
+        <div class="error-title">Catastrophic Error!</div>
+        <div class="error-code">Error 500: Internal App Meltdown</div>
+        <div class="error-message">
+            Your Spotify add-on just tried to remix the universe.<br>
+            <strong>But the beat dropped... and so did the app.</strong><br><br>
+            <em>Relax, grab a coffee and try again.</em>
+        </div>
+        <div class="error-actions">
+            <button onclick="window.location.href='mailto:support@youraddon.com?subject=Spotify%20Add-on%20Error'">Contact Support</button>
+        </div>
+        <div class="footer">
+            <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;">
+            <span>Spotify Addon</span>
+        </div>
+    </div>
+</body>
+</html>
